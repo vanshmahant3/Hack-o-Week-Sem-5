@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena - Library Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-bg-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-area">
+                <span class="logo-icon">📖</span>
+                <div class="logo-text">
+                    <h1>Athena</h1>
+                    <p>Library Management System</p>
+                </div>
+            </div>
+            <div class="theme-accent"></div>
+        </header>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-card" id="stat-total">
+                <div class="stat-info">
+                    <h3>Total Books</h3>
+                    <p class="stat-number" id="count-total">0</p>
+                </div>
+                <div class="stat-icon icon-blue">📚</div>
+            </div>
+            <div class="stat-card" id="stat-available">
+                <div class="stat-info">
+                    <h3>Available</h3>
+                    <p class="stat-number" id="count-available">0</p>
+                </div>
+                <div class="stat-icon icon-green">🟢</div>
+            </div>
+            <div class="stat-card" id="stat-borrowed">
+                <div class="stat-info">
+                    <h3>Borrowed</h3>
+                    <p class="stat-number" id="count-borrowed">0</p>
+                </div>
+                <div class="stat-icon icon-orange">🟠</div>
+            </div>
+        </section>
+
+        <!-- Toolbar Section -->
+        <section class="toolbar">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="Search by title, author, or ISBN...">
+            </div>
+            <button class="btn btn-primary" id="btn-open-add-modal">
+                <span class="btn-icon">＋</span> Add Book
+            </button>
+        </section>
+
+        <!-- Books List Section -->
+        <main class="books-display">
+            <div class="section-header">
+                <h2>Catalog Inventory</h2>
+                <span class="badge" id="inventory-count">0 items</span>
+            </div>
+            <div id="books-grid" class="books-grid">
+                <!-- Dynamic cards inserted here by JS -->
+                <div class="loading-state">Loading library inventory...</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Book Modal -->
+    <div class="modal-overlay" id="add-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Add New Book</h2>
+                <button class="close-btn" onclick="closeModal('add-modal')">×</button>
+            </div>
+            <form id="add-book-form">
+                <div class="form-group">
+                    <label for="add-title">Title</label>
+                    <input type="text" id="add-title" required placeholder="e.g. The Hobbit">
+                </div>
+                <div class="form-group">
+                    <label for="add-author">Author</label>
+                    <input type="text" id="add-author" required placeholder="e.g. J.R.R. Tolkien">
+                </div>
+                <div class="form-group">
+                    <label for="add-isbn">ISBN Number</label>
+                    <input type="text" id="add-isbn" required placeholder="e.g. 9780547928227">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('add-modal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Book Modal -->
+    <div class="modal-overlay" id="edit-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Edit Book Details</h2>
+                <button class="close-btn" onclick="closeModal('edit-modal')">×</button>
+            </div>
+            <form id="edit-book-form">
+                <input type="hidden" id="edit-book-id">
+                <div class="form-group">
+                    <label for="edit-title">Title</label>
+                    <input type="text" id="edit-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-author">Author</label>
+                    <input type="text" id="edit-author" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-isbn">ISBN Number</label>
+                    <input type="text" id="edit-isbn" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('edit-modal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Update Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Borrow Book Modal -->
+    <div class="modal-overlay" id="borrow-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Borrow Book</h2>
+                <button class="close-btn" onclick="closeModal('borrow-modal')">×</button>
+            </div>
+            <form id="borrow-book-form">
+                <input type="hidden" id="borrow-book-id">
+                <div class="form-group">
+                    <label>Book Title</label>
+                    <p class="modal-static-text" id="borrow-title-display">Book Title Here</p>
+                </div>
+                <div class="form-group">
+                    <label for="borrower-name">Borrower Name</label>
+                    <input type="text" id="borrower-name" required placeholder="e.g. John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Due Date</label>
+                    <input type="date" id="due-date" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('borrow-modal')">Cancel</button>
+                    <button type="submit" class="btn btn-success">Confirm Borrow</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
