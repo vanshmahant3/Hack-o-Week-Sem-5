@@ -121,4 +121,3 @@ Displays monthly sales revenue trends over time alongside top 5 revenue-generati
 
 ---
 
-Made by [Dhanish Ladwani](https://github.com/dhanish0711/)
