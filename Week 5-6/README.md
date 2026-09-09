@@ -185,4 +185,4 @@ Multi-epoch Binary Cross-Entropy loss decay and 2D classification decision surfa
 
 ---
 
-Made by [Dhanish Ladwani](https://github.com/dhanish0711/)
+
