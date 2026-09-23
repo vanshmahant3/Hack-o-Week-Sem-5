@@ -319,8 +319,3 @@ week 11-12/
 
 ---
 
-## 11. Author & Attribution
-
-**Author:** [Dhanish Ladwani](https://github.com/dhanish0711/)  
-**Coursework:** Hack-o-Week Odd Semester Session 2026–2027  
-**License:** MIT License
