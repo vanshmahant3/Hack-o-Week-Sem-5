@@ -6,10 +6,7 @@
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8%2B-11557c.svg)](https://matplotlib.org/)
 [![Status](https://img.shields.io/badge/Status-Complete-success.svg)]()
 
-> **Made by [Dhanish Ladwani](https://github.com/dhanish0711/)**  
-> *Curriculum: Machine Learning & Pattern Recognition — Dimensionality Reduction Module*
 
----
 
 ## 1. Executive Summary & Theoretical Context
 
