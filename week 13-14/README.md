@@ -7,7 +7,7 @@
 [![NumPy](https://img.shields.io/badge/NumPy-1.26%2B-013243.svg)](https://numpy.org/)
 [![Status](https://img.shields.io/badge/Status-Complete-success.svg)]()
 
-> **Made by [Dhanish Ladwani](https://github.com/dhanish0711/)**  
+
 > *Curriculum: Machine Learning & Pattern Recognition — Ensemble Learning & Regularization Module*
 
 ---
@@ -395,8 +395,3 @@ jupyter notebook week_13_14_ensemble_methods_xgboost_lightgbm.ipynb
 
 ---
 
-## 12. Author & Attribution
-
-**Author:** [Dhanish Ladwani](https://github.com/dhanish0711/)  
-**Coursework:** Hack-o-Week Odd Semester Session 2026–2027  
-**License:** MIT License
