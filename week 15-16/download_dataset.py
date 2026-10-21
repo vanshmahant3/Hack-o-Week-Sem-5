@@ -2,7 +2,7 @@
 Data Generation & Ingestion Module for Week 15-16:
 Clinical Heart Disease & Cardiovascular Risk Dataset + Non-Linear Toy Manifolds.
 
-Author: Dhanish Ladwani
+
 Curriculum: Machine Learning & Pattern Recognition — Week 15-16
 """
 
