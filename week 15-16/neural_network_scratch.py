@@ -4,7 +4,7 @@ Implements Layer Abstractions, Activation Functions, Loss Functions,
 Vectorized Forward/Backward Propagation, Optimizers (SGD, Momentum, RMSprop, Adam),
 and Finite-Difference Gradient Checking (< 1e-7 relative error).
 
-Author: Dhanish Ladwani
+
 Curriculum: Machine Learning & Pattern Recognition — Week 15-16
 """
 
