@@ -3,7 +3,7 @@ Interactive CLI Tool: Clinical Cardiovascular Risk Scoring & Model Deployment In
 Allows practitioners to test custom patient biomarkers, inspect live neural net layer
 activations, verify artifact SHA-256 checksums, and evaluate real-time deployment latency.
 
-Author: Dhanish Ladwani
+
 Curriculum: Machine Learning & Pattern Recognition — Week 15-16
 """
 
