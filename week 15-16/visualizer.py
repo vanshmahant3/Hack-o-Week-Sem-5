@@ -3,7 +3,7 @@ Publication-Grade Visualizer for Week 15-16:
 Neural Networks from Scratch & Model Deployment Basics.
 Generates 5 High-Resolution (300 DPI) Diagnostic Figures in week 15-16/reports/.
 
-Author: Dhanish Ladwani
+
 Curriculum: Machine Learning & Pattern Recognition — Week 15-16
 """
 
