@@ -3,7 +3,7 @@ Perceptron Engine & The Non-Linearity / XOR Limitation Proof.
 Implements Frank Rosenblatt's (1958) Perceptron algorithm from scratch in NumPy,
 evaluates linear separability on logic truth tables, and proves the XOR failure theorem.
 
-Author: Dhanish Ladwani
+
 Curriculum: Machine Learning & Pattern Recognition — Week 15-16
 """
 
