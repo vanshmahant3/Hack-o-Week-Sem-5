@@ -3,7 +3,7 @@ Model Deployment Basics & Serialization Engine: Pickle vs. Joblib.
 Implements Model Persistence, Production Artifact Enveloping, SHA-256 Checksum
 Integrity Verification, Benchmarking, and a Real-Time Scoring Microservice Simulator.
 
-Author: Dhanish Ladwani
+
 Curriculum: Machine Learning & Pattern Recognition — Week 15-16
 """
 
